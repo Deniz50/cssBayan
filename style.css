@@ -10,16 +10,21 @@ body {
 }
 
 .accordion__block {
-    width: 60%;
-    text-align: center;
+    display: block;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+	width: 80%;
+	margin: 10% 10%;
 }
 
 .accordion__tab {
+	position: relative;
 	background-color: #f5f5f5;
 	color: #444;
 	cursor: pointer;
 	padding: 1.8rem;
-	width: 90%;
+	width: 100%;
 	border: none;
 	text-align: center;
 	outline: none;
@@ -27,12 +32,6 @@ body {
 	transition: 0.4s;
 	margin-bottom: 2%;
 	box-sizing: border-box;
-}
-
-
-.accordion__tab:hover {
-	background-color: #f0f0f0;
-    color: #180cbb;
 }
 
 
@@ -59,20 +58,25 @@ body {
 
 .accordion__content {
 	background-color: white;
-	max-height: 0;
+	max-height: 0rem;
 	overflow: hidden;
-	padding: 0% 10%;
+	padding: 0 1.5rem;
 	transition: max-height 0.2s ease-out;
 	box-sizing: border-box;
 }
 
-.accordion__tab:hover .accordion__content {
-	height: 60px;
+.accordion__tab:hover {
+	background-color: #f0f0f0;
+    color: #180cbb;
 }
 
 
-.active + .accordion__content {
-	max-height: 50px; 
+
+
+.accordion__tab:hover .accordion__content {
+	max-height: 100rem;
+	transition: max-height 0.3s ease-in-out;
+	padding: 1.5rem;
 }
 
 
